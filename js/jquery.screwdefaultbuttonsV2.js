@@ -121,7 +121,6 @@
 			    
 			    	$thisParent.addClass('styledRadio');
 			    	
-			    	var $thisName = $this.attr('name');
 			    	
 			    	$thisParent.on('click', function(){
 			    		if (!($this.prop('checked')) && !($this.is(':disabled'))){
@@ -143,6 +142,7 @@
 				    				backgroundPosition:  '0 ' + checkedPos + "px"
 				    			});
 			    			
+			    			var $thisName = $this.attr('name');
 			    			var otherRadioBtns = $('input[name="'+ $thisName +'"]').not($this);
 			    			otherRadioBtns.trigger('radioSwitch');
 			    		}
